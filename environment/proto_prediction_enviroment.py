@@ -25,7 +25,6 @@ class ProtoPredictionEnvironment:
             reward = self.__get_reward(i)
             real_target_cur =  real_target_cur*self.__get_gamma(i) + reward
 
-        print(self.real_target[0:500])
 
     def __get_gamma(self, i):
         if(self.buffer.experiences[i].done == True):
