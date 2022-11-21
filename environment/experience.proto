@@ -1,0 +1,17 @@
+syntax = "proto2";
+
+package atari_prediction;
+
+
+message ExperienceBuffer{
+  optional string enviroment_name = 2;
+  optional string policy_type = 3;
+
+  message Experience {
+    required float reward = 1;
+    repeated float sensor_reading = 2;
+    required bool done = 3;
+    required int32 action = 4;
+  }
+  repeated Experience experiences = 1;
+}
