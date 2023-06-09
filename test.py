@@ -1,17 +1,22 @@
-from environment import proto_prediction_enviroment as atari_environment
-import matplotlib.pyplot as plt
+import gym
+game = "Pong" +"NoFrameskip-v4"
+env = gym.make(game)
+# This seed is fixed and was used
+# by the pre-trained agents to record actions.
+# Changing it will break the benchmark
+env.seed(1)
 
-if __name__=="__main__":
-    env_file_path = "WizardOfWorNoFrameskip-v4.proto"
-    gamma = 0.98
-    env = atari_environment.ProtoPredictionEnvironment(env_file_path, gamma)
-    for i in range(0, 100):
-       x = env.step()
-       reward = env.get_reward()
-       target  = env.get_target()
 
-       # Visualize environment
-       x = x.reshape((16,16))
-       plt.imshow(x)
-       plt.show()
-
+with open("policies/"+ game +".txt", "rb") as f:
+    byte = f.read(1)
+    ep_reward = 0
+    while byte != b"":
+        val = int.from_bytes(byte, 'big')
+        if(val==82):
+            print("Resetting; prev epiode return ", ep_reward)
+            env.reset()
+            ep_reward = 0
+        else:
+            obs, r, _, _ = env.step(val - 97)
+            ep_reward += r
+        byte = f.read(1)
