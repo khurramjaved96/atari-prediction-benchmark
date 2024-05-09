@@ -1,9 +1,10 @@
 # Arcade prediction benchmark
 For benchmark policy evaluation on Atari. The policies are taken from pre-trained rainbow DQN agent from the Chiner RL model zoo [1].
 
-A small test policy for Pong with sample code is available in test.py. The full policies for all environments can be downloaded from [Google drive link](https://drive.google.com/file/d/1zOWay0-9rGrmJMa9vP4qEwTjd-kziDTu/view?usp=sharing). Each environment contains over 100 million steps of interaction. 
+A small test policy for Pong with sample code is available in test.py. 
 
-[1] Fujita, Yasuhiro, et al. "Chainerrl: A deep reinforcement learning library." The Journal of Machine Learning Research 22.1 (2021): 3557-3570.
+Link to full policies: [Google drive](https://drive.google.com/file/d/1zOWay0-9rGrmJMa9vP4qEwTjd-kziDTu/view?usp=sharing).
+
 
 You can cite the benchmark as:
 ``` bash
@@ -16,5 +17,8 @@ You can cite the benchmark as:
   year={2023}
 }
 ```
+
+
+[1] Fujita, Yasuhiro, et al. "Chainerrl: A deep reinforcement learning library." The Journal of Machine Learning Research 22.1 (2021): 3557-3570.
 
 
