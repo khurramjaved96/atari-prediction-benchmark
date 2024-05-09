@@ -6,6 +6,7 @@ A small test policy for Pong with sample code is available in test.py. The full 
 [1] Fujita, Yasuhiro, et al. "Chainerrl: A deep reinforcement learning library." The Journal of Machine Learning Research 22.1 (2021): 3557-3570.
 
 You can cite the benchmark as:
+``` bash
 @article{javed2023scalable,
   title={Scalable real-time recurrent learning using columnar-constructive networks},
   author={Javed, Khurram and Shah, Haseeb and Sutton, Richard S and White, Martha},
@@ -14,5 +15,6 @@ You can cite the benchmark as:
   pages={1--34},
   year={2023}
 }
+```
 
 
