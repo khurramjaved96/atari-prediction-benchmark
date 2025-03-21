@@ -3,7 +3,7 @@ For benchmark policy evaluation on Atari. The policies are taken from pre-traine
 
 A small test policy for Pong with sample code is available in test.py. 
 
-Link to full policies: [Google drive]([https://drive.google.com/file/d/1V4DamdphYq9VNWBf9-1v1B773R9HSOUG/view?usp=sharing]).
+Link to full policies: [Google drive](https://drive.google.com/file/d/1V4DamdphYq9VNWBf9-1v1B773R9HSOUG/view?usp=sharing).
 
 
 You can cite the benchmark as:
